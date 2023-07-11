@@ -690,7 +690,7 @@ footer .misc {
 		padding: 9px 20px;
 	}
 	footer .misc {
-		margin: 5px auto 10px auto;
+		margin: -5px auto 10px auto;
 	}
 	.misc span a {
 		font-size: 0.75em;
