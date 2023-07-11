@@ -109,7 +109,6 @@ section#search .wrapper {
 	height: 370px;
 	border-radius: 50%;
 	overflow: hidden;
-    z-index: 2;
 }
 
 .wrapper .errorResult {
@@ -540,6 +539,16 @@ section#search .wrapper {
 	}
 }
 
+@media screen and (max-width: 415px) {
+	section#search .search-bar {
+		margin-left: 10px;
+	}
+	.search-bar .search-box {
+		width: 290px;
+    	padding: 2px;
+	}
+}
+
 @media screen and (max-width: 380px) {
 	.search-bar .search-box {
 		width: 260px;
@@ -587,7 +596,29 @@ section#search .wrapper {
 	}
 }
 
+@media screen and (max-width: 394px) {
+	section#search .search-bar {
+		margin-left: 18px;
+	}
+	.search-bar .search-box {
+		width: 260px;
+	}
+}
+
+@media screen and (max-width: 363px) {
+	header {
+	    padding: 10px 22px;
+	}
+	section#search .search-bar {
+	    margin-left: 6px;
+	}
+	.search-bar button {
+		margin: 0 7px;
+	}
+}
+
 @media screen and (max-width: 320px) {
+	
 	.search-bar .search-box {
 		width: 210px;
 		padding: 1.5px;
@@ -646,8 +677,64 @@ section#search .wrapper {
 	.recipe-details .body-contents:nth-child(1) {
 		width: 250px;
 	}
-/*	.body-contents .ingredients h2,
-	.body-contents .directions h2 {
-		font-size: 1.6em;
-	}*/
+}
+
+@media screen and (max-width: 281px) {
+	section#search .search-bar {
+	    margin-left: 4px;
+	}
+	.search-bar .search-box {
+		width: 200px;
+		padding: 1px;
+	}
+	.search-bar .search-box ion-icon {
+		font-size: 10px;
+	}
+	.search-bar button {
+		padding: 6px 10px;
+		margin: 0 6px;
+	}
+	.search-bar button b {
+		font-size: 0.9em;
+	}
+	.wrapper .loader,
+	.wrapper .errorResult {
+		width: 260px;
+    	height: 260px;
+	}
+	.wrapper .loader h2 {
+		left: 60px;
+	}
+	.wrapper .recipe-container {
+		padding: 10px 26px;
+	}
+	.recipe-container .item-card {
+		margin-inline: -22px;
+	}
+	/* popup section */
+	.popupBox::-webkit-scrollbar {
+		width: 8px;
+	}
+	.popupBox {
+		padding: 10px;
+	}
+	.popupBox.open {
+		width: 254px;
+    	height: 450px;
+	}
+	.popupBox .title-name-text {
+	    margin: 36px auto 12px auto;
+	    font-size: 1.8em;
+	}
+	.popupBox .recipe-details {
+	    grid-template-columns: 226px;
+	    grid-template-rows: 220px;
+	}
+	.recipe-details .body-contents:nth-child(1) {
+		width: 226px;
+	}
+	.ingredients ul li {
+		margin-left: 15px;
+    	font-size: 0.9em;
+	}
 }

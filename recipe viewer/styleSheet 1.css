@@ -32,6 +32,7 @@ header {
 }
 
 header .logo {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -181,7 +182,7 @@ nav ul li.active:nth-child(3) ~ .indicator
 /* home section */
 section#home {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -273,7 +274,7 @@ section#home .text-section {
 /* about section */
 section#about {
 	width: 100%;
-	min-height: 75vh;
+	min-height: 77vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -363,7 +364,7 @@ section#about {
 /* footer section */
 footer {
 	width: 100%;
-	height: 25vh;
+	height: 23vh;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -430,19 +431,28 @@ footer .misc {
 
 @keyframes animateDtpBg {
 	0%,100%{
-		background: url('assets/home-section-bg-desktop(1).jpg') 100% 100vh;
+		background: url('assets/home-section-bg-desktop(1).jpg') 100% 100% ;
 	}
 	33%{
-		background: url('assets/home-section-bg-desktop(2).jpg') 100% 100vh;
+		background: url('assets/home-section-bg-desktop(2).jpg') 100% 100% ;
 	}
 	66%{
-		background: url('assets/home-section-bg-desktop(3).jpg') 100% 100vh;
+		background: url('assets/home-section-bg-desktop(3).jpg') 100% 100% ;
 	}
 }
 
 
-
-
+@keyframes animateMobBg {
+		0%,100%{
+			background: url('assets/home-section-bg-mobile(1).jpg') 100% 100% ;
+		}
+		33%{
+			background: url('assets/home-section-bg-mobile(2).jpg') 100% 100% ;
+		}
+		67%{
+			background: url('assets/home-section-bg-mobile(4).jpg') 100% 100% ;
+		}
+	}
 
 
 @media screen and (max-width: 770px) {
@@ -468,6 +478,12 @@ footer .misc {
 	}
 }
 
+@media screen and (max-width: 740px) {
+	.text-body h1 {
+		font-size: 3.6em;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	header {
 		padding: 10px 15px;
@@ -481,7 +497,7 @@ footer .misc {
 		top: 63px;
 		width: 100%;
 		height: 100vh;
-		background-color: #2969d0f0;
+		background-color: #46a9edf0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -489,8 +505,13 @@ footer .misc {
 		z-index: -1;
 	}
 	nav.show ul {
-		flex-direction: column;
-		gap: 35px;
+		position: relative;
+	    top: -80px;
+	    flex-direction: column;
+	    gap: 35px;
+	}
+	nav.show ul .indicator {
+		display: none;
 	}
 	nav.show ul li a {
 		color: #fff;
@@ -516,7 +537,9 @@ footer .misc {
 		font-size: 1.6em;
 	}
 	section#home {
-		animation: animateMobBg 60s ease-in-out infinite;
+		background-size: cover;
+		background-repeat: no-repeat;
+		animation: animateMobBg 50s ease-in-out infinite;
 	}
 	section#home .text-section {
 		margin: auto 35px;
@@ -552,24 +575,6 @@ footer .misc {
 		margin: 15px auto 20px auto;
     	font-size: 1.2em;
 	}
-
-	@keyframes animateMobBg {
-		0%,100%{
-			background: url('assets/home-section-bg-mobile(1).jpg') 100% 100vh;
-		}
-		20%{
-			background: url('assets/home-section-bg-mobile(2).jpg') 100% 100vh;
-		}
-		40%{
-			background: url('assets/home-section-bg-mobile(3).jpg') 100% 100vh;
-		}
-		60%{
-			background: url('assets/home-section-bg-mobile(4).jpg') 100% 100vh;
-		}
-		80%{
-			background: url('assets/home-section-bg-mobile(5).jpg') 100% 100vh;
-		}
-	}
 }
 
 @media screen and (max-width: 430px) {
@@ -593,11 +598,33 @@ footer .misc {
 	}
 }
 
+@media screen and (max-width: 415px) {
+	.text-body h1 {
+		font-size: 1.85em;
+		line-height: 60px;
+	}
+}
+
+@media screen and (max-width: 394px) {
+	header {
+		padding: 10px 27px;
+	}
+	header .logo {
+    	left: -12px;
+	}
+	section#home .text-section {
+	    margin: auto 27px;
+	}
+	.text-body h1 span {
+		font-size: 2em;
+	}
+}
+
 @media screen and (max-width: 380px) {
 	.logo .logo-icon {
 		width: 31px;
     	height: 28px;
-	} 
+	}
 	section#home .text-section {
 		margin: auto 30px;
 	}
@@ -619,6 +646,15 @@ footer .misc {
 	}
 	footer .misc {
 		margin: 6px auto 10px auto;
+	}
+}
+
+@media screen and (max-width: 363px) {
+	.text-body h1 {
+		font-size: 1.7em;
+	}
+	.text-body h1 span {
+		font-size: 1.98em;
 	}
 }
 
@@ -655,6 +691,50 @@ footer .misc {
 	}
 	footer .misc {
 		margin: 5px auto 10px auto;
+	}
+	.misc span a {
+		font-size: 0.75em;
+	}
+	.misc span b {
+		font-size: 0.97em;
+	}
+	.misc .brand-logo {
+		width: 220px;
+	    height: 35px;
+	}
+}
+
+@media screen and (max-width: 281px) {
+	section#home .text-section {
+	    margin: auto 22px;
+	}
+	.text-body h4 {
+		font-size: 0.64em;
+	}
+	.text-body h1 span {
+		font-size: 2em;
+	}
+	.text-body h1 {
+		font-size: 1.3em;
+	}
+	section#about .about-container {
+		margin: 70px 40px 20px 40px;
+	}
+	.about-container .details p {
+	    font-size: 0.8em;
+	}
+	.details:nth-child(2) h4 {
+		margin: 10px auto 20px auto;
+    	font-size: 1em;
+	}
+	.details:nth-child(2) ul {
+		gap: 25px;
+	}
+	footer {
+		padding: 9px 20px;
+	}
+	footer .misc {
+	    margin: -10px auto 5px auto;
 	}
 	.misc span a {
 		font-size: 0.75em;
