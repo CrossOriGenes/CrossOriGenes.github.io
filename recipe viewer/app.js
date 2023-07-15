@@ -78,7 +78,6 @@ var fetchFoodCards = async (data) => {
 	        //showing the popup on view recipe button click
 	        viewPopupBtn.addEventListener('click', () => {
 	        	openRecipeDetailsBox(items)
-	        	// document.querySelectorAll('section').forEach(sections => sections.classList.add('blurBg'))
 	        })
 
 		})
@@ -154,5 +153,4 @@ searchBtn.addEventListener('click', () => {
 //popup close on close button click
 closePopupBtn.addEventListener('click', () => {
 	popupContents.parentElement.classList.remove('open')
-	// document.querySelectorAll('section').forEach(sections => sections.classList.remove('blurBg'))
 })
